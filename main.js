@@ -12,6 +12,10 @@ const main = async () => {
         .order('created_at', { ascending: false })
         .limit(1)
     console.log(whereiam);
+    const place = whereiam[0]
+    const msg = `${place.prefecture}${place.city}に滞在中です`
+    document.querySelector("#msg").innerText = msg
+
 }
 
 main();
